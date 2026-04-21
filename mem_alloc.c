@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <stdio.h>
 
-void* allocate(size_t size);  // tell compiler allocate exists
+void* allocate(size_t size);  
 
 int main() {
     // Test small allocation
