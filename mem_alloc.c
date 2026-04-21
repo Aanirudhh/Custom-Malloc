@@ -87,7 +87,7 @@ void refill_from_os(int bucket) {
 
 // LAYER 2: TRANSFER CACHE
 // Called when thread cache is empty
-// Grab 32 blocks from transfer cache → put in thread cache
+// Grab 32 blocks from transfer cache to put in thread cache
 
 void refill_thread_cache(int bucket) {
     // Transfer cache empty? go to OS
@@ -112,7 +112,7 @@ void refill_thread_cache(int bucket) {
     thread_cache.lengths[bucket] = grab;
 }
 
-// ===== MAIN ALLOCATE =====
+// MAIN ALLOCATE 
 
 void* allocate(size_t size) {
     if (size == 0) return NULL;
